@@ -49,7 +49,7 @@ jobs:
         id: fix
         if: ${{ inputs.apply_fixes == true && steps.audit.outcome == 'failure' }}
         run: |
-          npm audit fix --package-lock-only
+          npm audit fix --package-lock-only --audit-level=high
           npm ci
 
       - name: Push security fixes to the current branch
