@@ -9,14 +9,17 @@
     "start": "next start",
     "lint": "eslint",
     "test": "jest",
-    "test:coverage": "jest --coverage --ci"
+    "test:coverage": "jest --coverage --ci",
+    "inject-env": "node scripts/inject-public-env.mjs",
+    "upload": "node scripts/inject-public-env.mjs && opennextjs-cloudflare build && wrangler versions upload"
   },
   "dependencies": {
-    "next": "16.4.0",
+    "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.14",
     "@tailwindcss/turbopack": "^4",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
@@ -27,10 +30,11 @@
     "@types/react-dom": "^19",
     "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10",
-    "eslint-config-next": "16.4.0",
+    "eslint-config-next": "16.4.2",
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
     "tailwindcss": "^4",
-    "typescript": "npm:@typescript/typescript6@^6.0.2"
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "wrangler": "^4.155.0"
   }
 }
