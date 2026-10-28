@@ -56,9 +56,7 @@ function HeroMedia() {
       role="img"
       aria-label="Hero image placeholder"
     >
-      <span className="text-sm tracking-wide text-neutral-400">
-        Image placeholder
-      </span>
+      <span className="text-sm tracking-wide text-neutral-400">Image placeholder</span>
     </div>
   );
 }
