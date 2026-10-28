@@ -31,7 +31,7 @@ describe("SiteHeader", () => {
     expect(menu).toHaveClass("block");
     expect(screen.getByRole("button", { name: "Close menu" })).toHaveAttribute(
       "aria-expanded",
-      "true",
+      "true"
     );
 
     await user.click(screen.getByRole("button", { name: "Close menu" }));

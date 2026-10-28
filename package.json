@@ -7,7 +7,9 @@
     "build": "next build",
     "ci:build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
     "test": "jest",
     "test:coverage": "jest --coverage --ci",
     "inject-env": "node scripts/inject-public-env.mjs",
@@ -19,6 +21,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.6.3",
     "@opennextjs/cloudflare": "^1.20.14",
     "@tailwindcss/turbopack": "^4",
     "@testing-library/jest-dom": "^7.0.1",
@@ -29,8 +32,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "eslint": "^10",
-    "eslint-config-next": "16.4.2",
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
     "tailwindcss": "^4",

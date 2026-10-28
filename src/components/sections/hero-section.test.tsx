@@ -11,15 +11,12 @@ describe("HeroSection", () => {
       screen.getByRole("heading", {
         level: 1,
         name: hero.titleLines.join(" "),
-      }),
+      })
     ).toBeInTheDocument();
     expect(screen.getByText(hero.body)).toBeInTheDocument();
 
     for (const action of hero.actions) {
-      expect(screen.getByRole("link", { name: action.label })).toHaveAttribute(
-        "href",
-        action.href,
-      );
+      expect(screen.getByRole("link", { name: action.label })).toHaveAttribute("href", action.href);
     }
   });
 

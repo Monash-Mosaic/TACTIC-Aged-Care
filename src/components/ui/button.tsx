@@ -37,7 +37,7 @@ export function Button({
       className={cn(
         "inline-flex h-10 items-center justify-center gap-2 px-4 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current",
         variants[variant],
-        className,
+        className
       )}
     >
       {children}
@@ -48,12 +48,7 @@ export function Button({
 
 function ArrowIcon() {
   return (
-    <svg
-      viewBox="0 0 16 16"
-      className="size-3.5 shrink-0"
-      fill="none"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 16 16" className="size-3.5 shrink-0" fill="none" aria-hidden="true">
       <path
         d="M2.5 8h10.5M9.25 4.25 13 8l-3.75 3.75"
         stroke="currentColor"

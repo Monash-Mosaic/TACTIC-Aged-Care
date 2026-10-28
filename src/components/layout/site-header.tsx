@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
@@ -68,10 +68,7 @@ export function SiteHeader() {
 
       <div
         id="mobile-nav"
-        className={cn(
-          "border-t border-white/15 bg-header lg:hidden",
-          open ? "block" : "hidden",
-        )}
+        className={cn("border-t border-white/15 bg-header lg:hidden", open ? "block" : "hidden")}
       >
         <nav
           aria-label="Primary"

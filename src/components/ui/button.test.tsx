@@ -6,30 +6,24 @@ describe("Button", () => {
   it("renders a link to the given href", () => {
     render(<Button href="/about">About Us</Button>);
 
-    expect(screen.getByRole("link", { name: "About Us" })).toHaveAttribute(
-      "href",
-      "/about",
-    );
+    expect(screen.getByRole("link", { name: "About Us" })).toHaveAttribute("href", "/about");
   });
 
   it("marks the current page", () => {
     render(
       <Button href="/" current>
         Home
-      </Button>,
+      </Button>
     );
 
-    expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute(
-      "aria-current",
-      "page",
-    );
+    expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute("aria-current", "page");
   });
 
   it("shows an arrow when requested", () => {
     const { container } = render(
       <Button href="/tool" showArrow>
         Get the Tool
-      </Button>,
+      </Button>
     );
 
     expect(container.querySelector("svg")).toBeInTheDocument();
