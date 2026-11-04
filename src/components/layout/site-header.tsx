@@ -18,11 +18,11 @@ export function SiteHeader() {
 
   return (
     <header className="bg-header text-white">
-      <div className="mx-auto flex h-[76px] w-full max-w-[1240px] items-center justify-between gap-6 px-6 lg:px-10">
+      <div className="mx-auto flex h-[95px] w-full max-w-[1440px] items-center justify-between gap-6 px-6 sm:px-12">
         <Logo />
 
         <div className="hidden items-center lg:flex">
-          <nav aria-label="Primary" className="flex items-center gap-1">
+          <nav aria-label="Primary" className="flex items-center gap-5">
             {mainNav.map((item) => {
               const current = pathname === item.href;
 
@@ -30,9 +30,12 @@ export function SiteHeader() {
                 <Button
                   key={item.href}
                   href={item.href}
-                  variant={current ? "outline" : "ghost"}
+                  variant="ghost"
                   current={current}
-                  className="h-9 px-3.5"
+                  className={cn(
+                    "relative h-10 px-1 text-[13px] after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white after:transition-transform",
+                    current ? "after:scale-x-100" : "after:scale-x-0"
+                  )}
                 >
                   {item.label}
                 </Button>
@@ -44,7 +47,7 @@ export function SiteHeader() {
             variant="outline"
             showArrow
             current={pathname === toolLink.href}
-            className="ml-4 h-9 px-3.5"
+            className="ml-7 h-12 px-6 text-[13px]"
           >
             {toolLink.label}
           </Button>
@@ -72,7 +75,7 @@ export function SiteHeader() {
       >
         <nav
           aria-label="Primary"
-          className="mx-auto flex w-full max-w-[1240px] flex-col gap-2 px-6 py-4"
+          className="mx-auto flex w-full max-w-[1440px] flex-col gap-2 px-6 py-4 sm:px-12"
         >
           {mainNav.map((item) => {
             const current = pathname === item.href;

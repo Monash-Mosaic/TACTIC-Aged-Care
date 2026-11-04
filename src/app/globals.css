@@ -1,25 +1,64 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --header: #1a1a1a;
-  --ink: #1a1a1a;
-  --muted: #737373;
-}
+@import "../styles/tokens.css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--surface);
+  --color-foreground: var(--ink);
   --color-header: var(--header);
   --color-ink: var(--ink);
-  --color-muted: var(--muted);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--ink-muted);
+  --color-subtle: var(--surface-subtle);
+  --font-sans: var(--font-interface);
+  --font-serif: var(--font-editorial);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-interface);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: var(--black-700);
+  color: var(--white-100);
+}
+
+.page-shell {
+  width: min(calc(100% - 3rem), var(--page-width));
+  margin-inline: auto;
+}
+
+.section-title {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+.editorial-shadow {
+  box-shadow: 0 14px 34px rgb(16 17 19 / 0.035);
+}
+
+@media (max-width: 40rem) {
+  .page-shell {
+    width: min(calc(100% - 2rem), var(--page-width));
+  }
 }

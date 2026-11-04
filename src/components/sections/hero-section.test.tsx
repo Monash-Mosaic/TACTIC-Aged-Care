@@ -20,9 +20,9 @@ describe("HeroSection", () => {
     }
   });
 
-  it("shows a placeholder until a hero image is set", () => {
+  it("renders the portrait asset", () => {
     render(<HeroSection />);
 
-    expect(screen.getByRole("img", { name: "Hero image placeholder" })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: hero.imageAlt })).toBeInTheDocument();
   });
 });

@@ -1,0 +1,46 @@
+:root {
+  /* Editorial monochrome scale from the supplied design system. */
+  --white-100: #ffffff;
+  --white-200: #fbfbfa;
+  --white-300: #f5f5f3;
+  --white-400: #eaeae7;
+  --white-500: #dfdfdc;
+  --white-600: #cecec9;
+  --white-700: #bcbcb6;
+  --white-800: #9c9c95;
+  --white-900: #7c7c75;
+
+  --black-100: #54575c;
+  --black-200: #42464b;
+  --black-300: #35383d;
+  --black-400: #2c2f33;
+  --black-500: #24262a;
+  --black-600: #1c1e21;
+  --black-700: #16181a;
+  --black-800: #101113;
+  --black-900: #000000;
+
+  --surface: var(--white-100);
+  --surface-subtle: var(--white-300);
+  --surface-disabled: var(--white-400);
+  --ink: var(--black-600);
+  --ink-muted: var(--white-900);
+  --line: var(--black-100);
+  --header: var(--black-700);
+
+  --space-2: 0.125rem;
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-96: 6rem;
+
+  --radius-none: 0;
+  --page-width: 74.5rem;
+  --font-editorial: var(--font-ibm-plex-serif), Georgia, serif;
+  --font-interface: var(--font-geist-sans), Arial, sans-serif;
+}
